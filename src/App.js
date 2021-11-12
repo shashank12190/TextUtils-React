@@ -1,19 +1,17 @@
 // import logo from './logo.svg';
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react'
 import Alert from './components/Alert';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
-
-// const naaam = "Harry";
 function App() {
 
   //weather dark mode is enabled or not 
@@ -33,14 +31,6 @@ function App() {
       setmode("dark")
       document.body.style.backgroundColor = "#1f1139"
       showAlert("Dark mode has been enabled", "success")
-      // setInterval(() => {
-      //   document.title = "S H A S H A N K"
-
-      // }, 2000);
-      // setInterval(() => {
-      //   document.title = "P A R A S H A R"
-
-      // }, 1500);
     } else {
       setmode("light")
       document.body.style.backgroundColor = "white"
@@ -49,21 +39,21 @@ function App() {
   }
   return (
     <>
-      <Router>
+      {/* <Router> */}
 
-        <Navbar title="textUtils" mode={mode} toggleMode={toggleMode} />
-        <Alert alert={alert} />
-        <div className="container my-3">
-          <Switch>
-            <Route path="/about">
+      <Navbar title="textUtils" mode={mode} toggleMode={toggleMode} />
+      <Alert alert={alert} />
+      <div className="container my-3">
+        {/* <Switch>  */}
+        {/* <Route path="/about">
               <About />
-            </Route>
-            <Route path="/">
-              <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
+            </Route>  */}
+        {/* <Route path="/"> */}
+        <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
+        {/* </Route> */}
+        {/* </Switch> */}
+      </div>
+      {/* </Router> */}
 
 
 
